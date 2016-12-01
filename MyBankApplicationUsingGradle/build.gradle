@@ -1,26 +1,30 @@
-apply plugin :'java'
+apply plugin: 'java'
+apply plugin: 'maven'
 
-//apply plugin : 'application'
-//apply plugin: 'sonarqube-runner' 
-//apply plugin: "sonar"
+group = 'BankAppDemo'
+version = '0.0.1-SNAPSHOT'
+
+description = """"""
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 
 
 
 
-//apply plugin: 'sonar-runner'
-repositories
-{
-maven { url "http://repo.maven.apache.org/maven2" } 
+repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
 }
-//repositories { jcenter() }
-dependencies { testCompile "org.mockito:mockito-core:1.+" }
 
 dependencies {
-  testCompile 'junit:junit:4.12'
+	testCompile 'junit:junit:4.12'
+    compile group: 'junit', name: 'junit', version:'4.1'
+    compile group: 'org.mockito', name: 'mockito-all', version:'1.9.5'
+    
+    
 }
-//sonarRunner {
-//sonarProperties {
- // property "sonar.projectName", "bankapp"
-  //property "sonar.projectKey", "org.sonarqube:java-gradle-simple"
-//}
-//}
+
+task wrapper(type: Wrapper){
+	gradleVersion = '2.6'
+}
