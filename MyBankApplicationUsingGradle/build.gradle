@@ -15,7 +15,7 @@ apply plugin :'java'
 //   url "http://10.109.32.183:8081/nexus/content/groups/public"
 // }
 //}
-repositories { jcenter() }
+//repositories { jcenter() }
 dependencies { testCompile "org.mockito:mockito-core:1.+" }
 
 dependencies {
